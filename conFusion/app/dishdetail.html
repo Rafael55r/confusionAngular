@@ -46,9 +46,10 @@ content must come *after* these tags -->
                 </div>
                 <div class="col-xs-9 col-xs-offset-1">
 
-
+                    <p>
+                    <h3>Custumer comments</h3> sort by: <input type="text" ng-model="dish.filterComment" />
                     <ul class="media-list">
-                        <li class="media" ng-repeat="ArrayComment in dishDetailCtrl.dish.comments">
+                        <li class="media" ng-repeat="ArrayComment in dishDetailCtrl.dish.comments | orderBy: dish.filterComment">
                             <div class="media-left media-middle">
                                 <blockquote>
                                     <h3>{{ArrayComment.rating}} Stars</h3>
